@@ -1,0 +1,126 @@
+# Data paths related
+
+dataset_raw_path: data/raw/laptop_price_data.csv
+dataset_path: data/processed/raw_dataset.pkl
+
+# Splitting related
+
+test_size: 0.3
+valid_size: 0.5
+
+input_set_path: data/output/input.pkl
+output_set_path: data/output/output.pkl
+
+train_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+
+valid_set_path:
+- data/processed/x_valid.pkl
+- data/processed/y_valid.pkl
+
+test_set_path:
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+
+# Preprocessed data paths related
+
+train_clean_path:
+- data/processed/x_train_clean.pkl
+- data/processed/y_train_clean.pkl
+
+valid_clean_path:
+- data/processed/x_valid_clean.pkl
+- data/processed/y_valid_clean.pkl
+
+test_clean_path:
+- data/processed/x_test_clean.pkl
+- data/processed/y_test_clean.pkl
+
+production_model_path: models/production_model.pkl
+training_log_path: log/training_log.json
+
+standardizer_path : data/output/standardizer.pkl
+ohe_path: data/output/one_hot_encoder.pkl
+
+preprocessor_path : data/output/preprocessor.pkl
+
+# Predictors and label related
+
+label: Price
+predictors:
+- Company
+- TypeName
+- OpSys
+- Cpu
+- Inches
+- Ram
+- Memory
+- Gpu
+- Weight
+- ScreenResolution
+- HDD
+- SSD
+- Hybrid
+- Flash_Storage
+
+numerical_columns:
+- Inches
+- Ram
+- HDD
+- SSD
+- Hybrid
+- Flash_Storage
+- Weight
+- X_res
+- Y_res
+
+cat_columns:
+- Company
+- TypeName
+- OpSys
+- Cpu Name
+- Gpu
+
+# Debug related
+
+print_debug: true
+
+# Range of data related
+
+range_company:
+- Lenovo
+- Dell
+- HP
+- Asus
+- Acer
+- Toshiba
+- MSI
+- Apple
+- Samsung
+- Razer
+- Vero
+- Chuwi
+- Mediacom
+- Microsoft
+- Google
+- Xiaomi
+- Huawei
+- LG
+- Fujitsu
+
+# Splitting related
+
+test_size: 0.3
+valid_size: 0.5
+
+# seed
+
+seed: 42
+
+# Modeling related
+list_of_model_path: log/list_of_model.pkl
+list_of_param_path: log/list_of_param.pkl
+list_of_tuned_model_path: log/list_of_tuned_model.pkl
+best_model_path: models/best_model.pkl
+best_threshold_path: models/best_threshold.pkl
